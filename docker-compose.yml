@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: node-docker.app
+    tty: true
+    privileged: true
+    ports:
+      - "80:80"
+      - "3000:3000"
+      - "4000:4000"
+      - "5500:5500"
+    volumes:
+      - ./share:/share
