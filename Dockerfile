@@ -20,6 +20,9 @@ RUN yum update -y \
 # alias
 RUN echo "alias ll='ls -la -F'" >> ~/.bashrc
 
+# git tab completion
+RUN echo "source /usr/share/doc/git/contrib/completion/git-completion.bash" >> ~/.bashrc
+
 # node.js install
 RUN curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash - \
   && yum install -y nodejs \
@@ -30,3 +33,4 @@ RUN curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash - \
 WORKDIR /share
 
 CMD ["/sbin/init"]
+
