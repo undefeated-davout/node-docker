@@ -24,7 +24,7 @@ RUN echo "alias ll='ls -la -F'" >> ~/.bashrc
 RUN echo "source /usr/share/doc/git/contrib/completion/git-completion.bash" >> ~/.bashrc
 
 # node.js install
-RUN curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash - \
+RUN curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash - \
   && yum install -y nodejs \
   && rm -rf /var/cache/yum/* \
   && yum clean all
