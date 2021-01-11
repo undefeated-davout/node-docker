@@ -12,6 +12,7 @@ RUN yum update -y \
     langpacks-ja \
     make \
     sudo \
+    tmux \
     unzip \
     wget \
   && rm -rf /var/cache/yum/* \
@@ -33,4 +34,3 @@ RUN curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash - \
 WORKDIR /share
 
 CMD ["/sbin/init"]
-
