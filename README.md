@@ -4,19 +4,19 @@
 
 ### 以下、cloneしたディレクトリ直下にてコマンド実行
 
-```$xslt
+```bash
 docker-compose build
 ```
 
 ### 実行
 
-```$xslt
+```bash
 docker-compose up -d
 ```
 
 ### コンテナ内へログイン
 
-```$xslt
+```bash
 docker exec -it node-docker.app /bin/bash
 ```
 
@@ -24,13 +24,13 @@ docker exec -it node-docker.app /bin/bash
 
 ### 日本語設定
 
-```$xslt
+```bash
 localectl set-locale LANG=ja_JP.UTF-8
 ```
 
 ### nodenvインストール
 
-```$xslt
+```bash
 # anyenv初期処理
 . ~/.bash_profile
 anyenv install --init
@@ -41,11 +41,11 @@ anyenv install nodenv
 
 # 使用可能nodeバージョン確認
 nodenv install -l
-# nodeインストール
-nodenv install 14.15.4
 # グローバルnodeバージョン設定
+nodenv install 14.15.4
 nodenv global 14.15.4
 # カレントディレクトリnodeバージョン設定
+# 任意のディレクトリへ移動して
 nodenv install 12.20.1
 nodenv local 12.20.1
 
