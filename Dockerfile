@@ -24,11 +24,15 @@ RUN echo "alias ll='ls -la -F'" >> ~/.bashrc
 # git tab completion
 RUN echo "source /usr/share/doc/git/contrib/completion/git-completion.bash" >> ~/.bashrc
 
-# node.js install
-RUN curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash - \
-  && yum install -y nodejs \
-  && rm -rf /var/cache/yum/* \
-  && yum clean all
+# anyenv install
+RUN git clone https://github.com/anyenv/anyenv ~/.anyenv \
+  && echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile \
+  && echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
+
+# anyenv update, anyenv-update install
+RUN mkdir -p ~/.anyenv/plugins \
+  && git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update \
+  && git clone https://github.com/znz/anyenv-git.git ~/.anyenv/plugins/anyenv-git
 
 # work directory
 WORKDIR /share
