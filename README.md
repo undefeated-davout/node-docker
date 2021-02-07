@@ -52,21 +52,3 @@ nodenv local 12.20.1
 # インストールされた各バージョンの確認
 anyenv versions
 ```
-
-### npmインストール
-
-```$xslt
-# init
-npm init
-# インストール
-npm install \
-  typescript \
-  ts-node \
-  ts-node-dev
-```
-
-### ts-node-dev
-
-```$xslt
-ts-node-dev --respawn sample.ts
-```
