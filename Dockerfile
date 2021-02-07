@@ -4,17 +4,17 @@ FROM centos:8
 RUN yum update -y \
   && yum groupinstall -y "Development tools" \
   && yum install -y \
-    cmake \
-    curl \
-    gcc \
-    gcc-c++ \
-    git \
-    langpacks-ja \
-    make \
-    sudo \
-    tmux \
-    unzip \
-    wget \
+  cmake \
+  curl \
+  gcc \
+  gcc-c++ \
+  git \
+  langpacks-ja \
+  make \
+  sudo \
+  tmux \
+  unzip \
+  wget \
   && rm -rf /var/cache/yum/* \
   && yum clean all
 
