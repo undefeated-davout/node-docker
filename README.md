@@ -42,12 +42,12 @@ anyenv install nodenv
 # 使用可能nodeバージョン確認
 nodenv install -l
 # グローバルnodeバージョン設定
-nodenv install 14.15.4
-nodenv global 14.15.4
+nodenv install 14.15.5
+nodenv global 14.15.5
 # カレントディレクトリnodeバージョン設定
 # 任意のディレクトリへ移動して
-nodenv install 12.20.1
-nodenv local 12.20.1
+nodenv install 12.20.2
+nodenv local 12.20.2
 
 # インストールされた各バージョンの確認
 anyenv versions

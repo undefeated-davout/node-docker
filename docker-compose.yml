@@ -1,7 +1,8 @@
 version: "3.8"
 services:
   app:
-    build: .
+    # build: .
+    image: undefeateddavout/node-docker
     container_name: node-docker.app
     tty: true
     privileged: true
