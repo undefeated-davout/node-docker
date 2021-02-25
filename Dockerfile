@@ -10,6 +10,7 @@ RUN yum update -y \
   gcc-c++ \
   git \
   langpacks-ja \
+  lsof \
   make \
   sudo \
   tmux \
