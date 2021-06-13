@@ -20,7 +20,7 @@ RUN yum update -y \
   && yum clean all
 
 # alias
-RUN echo "alias ll='ls -la -F'" >> ~/.bashrc
+RUN echo "alias ll='ls -lahF'" >> ~/.bashrc
 
 # git tab completion
 RUN echo "source /usr/share/doc/git/contrib/completion/git-completion.bash" >> ~/.bashrc
