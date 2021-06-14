@@ -17,7 +17,7 @@ docker-compose up -d
 ### コンテナ内へログイン
 
 ```bash
-docker exec -it node-docker.app /bin/bash
+docker exec -it node-docker.app /bin/bash --login
 ```
 
 ## 各種設定、インストールなど
