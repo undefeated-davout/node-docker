@@ -49,4 +49,7 @@ nodenv install 12.20.2 && nodenv local 12.20.2
 
 # インストールされた各バージョンの確認
 anyenv versions
+
+# yarn インストール
+npm install -g yarn
 ```
